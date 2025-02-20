@@ -1,5 +1,6 @@
 import dns from 'dns';
 import { startParseServer, stopParseServer, dropDB } from './utils/test-runner.js';
+import { beforeAll, afterAll } from 'node:test';
 
 // Ensure localhost resolves to ipv4 address first on node v17+ for connection to MongoDB;
 // see https://www.mongodb.com/community/forums/t/econnrefused-27017/131911

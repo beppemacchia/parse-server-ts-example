@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:8.0.0
+    container_name: mongodb-parse
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: 2025mongo
+      MONGO_INITDB_DATABASE: parse
+    volumes:
+      - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+      - mongo_data:/data/db
+
+  parse-server:
+    build: .
+    container_name: parse-server
+    depends_on:
+      - mongodb
+    ports:
+      - "1337:1337"
+    env_file:
+      - .env
+    environment:
+      DATABASE_URI: mongodb://parse:2025parse@mongodb:27017/parse
+    restart: unless-stopped
+
+volumes:
+  mongo_data:
