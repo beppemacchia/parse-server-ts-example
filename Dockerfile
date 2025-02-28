@@ -6,4 +6,4 @@ RUN npm install
 
 EXPOSE 1337
 
-CMD [ "node", "--import=tsx", "src/server/app.ts" ]
+CMD [ "node", "--import=tsx", "src/server/server.ts" ]

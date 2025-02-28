@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-redundant-type-constituents */
 export interface AfterDeleteDefinition<T extends Parse.Object = Parse.Object<Parse.Attributes>> {
   func?: (request: Parse.Cloud.AfterDeleteRequest<T>) => Promise<void> | void;
   validator?: Parse.Cloud.Validator | ((request: Parse.Cloud.FunctionRequest) => any);
@@ -65,7 +64,7 @@ export interface AfterDeleteFileDefinition {
 
 export interface FunctionDefinition {
   name: string;
-  func: (request: Parse.Cloud.FunctionRequest) => Promise<any> | any;
+  func: (request: Parse.Cloud.FunctionRequest) => any;
   validator?: Parse.Cloud.Validator | ((request: Parse.Cloud.FunctionRequest) => any);
 }
 

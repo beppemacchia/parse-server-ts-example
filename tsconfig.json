@@ -8,12 +8,12 @@
     "moduleResolution": "node",
     "sourceMap": true,
     "resolveJsonModule": true,
-    "outDir": "./",
+    "outDir": "./dist",
     "baseUrl": ".",
     "rootDir": "src",
-    "types": ["node", "parse"],
+    "types": ["node", "parse", "jest"],
     "skipLibCheck": true
   },
-  "include": ["src/**/*"],
-  "exclude": ["logs"]
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "logs"]
 }

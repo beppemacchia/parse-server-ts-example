@@ -1,7 +1,7 @@
 export class UserModel extends Parse.User {
-  public static className = '_User';
+  public static readonly className = '_User';
 
-  public static fields = {
+  public static readonly fields = {
     objectId: 'objectId',
     createdAt: 'createdAt',
     updatedAt: 'updatedAt',
@@ -12,11 +12,7 @@ export class UserModel extends Parse.User {
     emailVerified: 'emailVerified',
     authData: 'authData',
   };
-
-  constructor() {
-    super();
-  }
-
+ 
   public static registerParseSubclass(): void {
     Parse.Object.registerSubclass(UserModel.className, UserModel);
   }

@@ -1,12 +1,11 @@
 import type { FunctionDefinition } from '../models/interfaces/parse-definition.interface';
 
 /**
- * Hello World Job
+ * Hello World Function
  */
 const helloWorld: FunctionDefinition = {
-  name: 'helloJob',
+  name: 'helloWorld',
   func: req => {
-    console.dir(req.params);
     return 'Hello world!';
   },
 };

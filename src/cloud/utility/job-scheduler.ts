@@ -2,8 +2,8 @@ import { CronJob } from 'cron';
 import { logger } from '../../shared/logger';
 
 export class JobScheduler {
-  private jobs: CronJob<any, any>[];
-  private timezone: string;
+  private readonly jobs: CronJob<any, any>[];
+  private readonly timezone: string;
 
   constructor(timezone?: string) {
     this.jobs = [];

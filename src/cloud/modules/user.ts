@@ -1,4 +1,4 @@
-import { logger } from 'src/shared/logger';
+import { logger } from '../../shared/logger';
 import type { AfterSaveDefinition, BeforeSaveDefinition } from '../models/interfaces/parse-definition.interface';
 import { UserModel } from '../models/user.model';
 

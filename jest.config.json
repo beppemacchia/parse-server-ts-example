@@ -1,0 +1,16 @@
+{
+  "verbose": true,
+  "globalSetup": "<rootDir>/test/config/setup.cjs",
+  "globalTeardown": "<rootDir>/test/config/teardown.cjs",
+  "preset": "ts-jest/presets/default-esm",
+  "testEnvironment": "node",
+  "extensionsToTreatAsEsm": [".ts"],
+  "transform": {
+    "^.+\\.tsx?$": [
+      "ts-jest",
+      {
+        "useESM": true
+      }
+    ]
+  }
+}

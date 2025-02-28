@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import _logger from 'parse-server/lib/logger';
 
 interface ParseLogger {

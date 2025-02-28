@@ -1,7 +1,7 @@
 export class InstallationModel extends Parse.Installation {
-  public static className = '_Installation';
+  public static readonly className = '_Installation';
 
-  public static fields = {
+  public static readonly fields = {
     objectId: 'objectId',
     createdAt: 'createdAt',
     updatedAt: 'updatedAt',
@@ -20,10 +20,6 @@ export class InstallationModel extends Parse.Installation {
     appIdentifier: 'appIdentifier',
     parseVersion: 'parseVersion',
   };
-
-  constructor() {
-    super();
-  }
 
   public static registerParseSubclass(): void {
     Parse.Object.registerSubclass(InstallationModel.className, InstallationModel);
